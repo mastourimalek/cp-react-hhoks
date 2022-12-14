@@ -22,7 +22,7 @@ const NavBar = () => {
           <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link onClick={()=>navigate('/Aboutus')}>About us</Nav.Link>
             <Nav.Link onClick={()=>navigate('/Contactus')}>Contact us</Nav.Link>
-            <Nav.Link onClick={()=>navigate('./Amin')}>Admin</Nav.Link>
+            <Nav.Link onClick={()=>navigate('/Admin')}>Admin</Nav.Link>
 
           </Nav>
         </Container>

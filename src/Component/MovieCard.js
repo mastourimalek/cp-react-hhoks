@@ -1,7 +1,11 @@
 import React from 'react'
-import {Card} from 'react-bootstrap'
+import {Button, Card, Nav} from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 import ReactStars from 'react-stars'
+import { Link } from 'react-router-dom'
+import './MovieCard.css'
 const MovieCard = ({movie}) => {
+  const navigate=useNavigate();
   return (
     <div>
      <Card style={{ width: '18rem' }}>
@@ -18,6 +22,10 @@ const MovieCard = ({movie}) => {
   color2={'#ffd700'} />,
         
       </Card.Body>
+      <div className='space'>
+      <Link to={`/MovieDescription/${movie.id}`} >Description</Link>
+        <Button variant="primary" href={movie.trailer} > Trailer</Button>
+        </div>
     </Card>
     </div>
   )
